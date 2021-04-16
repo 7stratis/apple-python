@@ -10,7 +10,7 @@ data = subprocess.Popen(['softwareupdate', '-l'], stdout = subprocess.PIPE)
 output = data.communicate()
 print output[0]
 if(output!=('Software Update Tool\n\nFinding available software\n', None)):
-	print("yes updates")
+	print("Software Updates available")
 	c=raw_input("Do you want to install the Software Updates? [Y/n]?: ")
 	if(c=="Y" or c=="y"):
 		data1 = subprocess.Popen(['softwareupdate', '-ia'], stdout = subprocess.PIPE)
